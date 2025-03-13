@@ -1,0 +1,132 @@
+  body {
+  position: relative;
+  padding-right: 300px; 
+}
+
+body::before {
+  content: "";
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('photo/background.jpg');
+  background-repeat:initial;
+  opacity: 0.2; 
+  z-index: -1;
+}
+  h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: serif;
+  }
+  h3 {
+  text-align: center;
+  margin-bottom: 2%;
+  }
+
+  p {
+  font-family: verdana;
+  font-size: 20px;
+  }
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: white; 
+  background-color: #0a8df8; 
+  padding: 30px 50px;
+  margin: 0 7%; 
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #29d7dd;
+}
+.fixed-image {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 20%;
+  height: auto;
+  z-index: 2;
+}
+.FirstParagraph {
+  margin-bottom: 2%;
+  font-weight: 600;
+}
+.SecondParagraph {
+  margin-bottom: 2%;
+  font-weight: 600;
+}
+.TrirdParagraph{
+  margin-bottom: 2%;
+  font-weight: 600;
+}
+.PhoneNumb{
+  margin-top: 5%;
+  text-align: center;
+  font-weight: 600;
+}
+.Email{
+  text-align: center;
+  font-weight: 600;
+}
+
+.gallery {
+        position: relative;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      .imageMain {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 50%;
+      }
+      .imageMain img {
+        width: 35%;
+        height: 35%;
+      }
+      .image {
+        display: none;
+        width: 100%;
+        height: 50%;
+      }
+      input#image1:checked ~ .imageMain #img1,
+      input#image2:checked ~ .imageMain #img2,
+      input#image3:checked ~ .imageMain #img3,
+      input#image4:checked ~ .imageMain #img4 {
+        display: block;
+      }
+      .controls label {
+        display: inline-block;
+        background: #002794;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .controls label:hover {
+        background: #29d7dd;
+      }
+      input#image1:checked ~ .controls label[for="image1"],
+      input#image2:checked ~ .controls label[for="image2"],
+      input#image3:checked ~ .controls label[for="image3"],
+      input#image4:checked ~ .controls label[for="image4"] {
+        background: #0a8df8;
+      }
